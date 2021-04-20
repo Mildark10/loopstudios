@@ -1,0 +1,336 @@
+/*generales*/
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+img {
+    max-width: 100%;
+}
+
+ :root {
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Dark_Gray: hsl(0, 0%, 55%);
+    --Very_Dark: hsl(0, 0%, 41%);
+    --font_Atalata: 'Alata', sans-serif;
+    --font_Josefina: 'Josefin Sans', sans-serif;
+}
+
+.content {
+    margin: 12% 5% 5%;
+}
+
+
+/**/
+
+
+/* seccion de body */
+
+section.body {
+    background-image: url(../images/desktop/image-hero.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 99vh;
+}
+
+.nav-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 35px;
+}
+
+.nav-box .logo {
+    width: 50%;
+}
+
+.navegacion {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navegacion ul a {
+    position: relative;
+    text-decoration: none;
+    color: var(--White);
+    font-family: var(--font_Atalata);
+    font-weight: 400;
+}
+
+.navegacion ul a:hover {
+    color: rgba(247, 247, 247, 0.823);
+    transition: .9s;
+}
+
+.navegacion ul a:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 25px;
+    transform: translateX(-50%) scale(0);
+    -webkit-transform: translateX(-50%) scaleX(0);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: -50% -50%;
+    width: 60%;
+    height: 2px;
+    background-color: var(--White);
+    -webkit-transition: transform 250ms;
+    transition: transform 250ms;
+}
+
+.navegacion ul a:hover:after {
+    -webkit-transform: translateX(-50%) scale(1);
+    transform: translateX(-50%) scale(1);
+}
+
+.titulo {
+    border: 2px solid var(--White);
+    width: 45%;
+    margin: 110px 0 0 145px;
+}
+
+.titulo h1 {
+    text-align: justify;
+    font-size: 75px;
+    color: var(--White);
+    text-transform: uppercase;
+    font-family: var(--font_Josefina);
+    margin: 15px 0 0 50px;
+}
+
+
+/**/
+
+
+/* seccion de leader */
+
+.leader {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+}
+
+.texto {
+    margin: 15% 45px 50px 42%;
+    padding: 6% 10% 10% 6%;
+    position: absolute;
+    width: 46%;
+    background-color: var(--White);
+}
+
+.texto h2 {
+    color: var(--Black);
+    padding: 0 0 30px 0;
+    font-family: var(--font_Josefina);
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 45px;
+}
+
+.texto p {
+    font-weight: 400;
+    color: var(--Dark_Gray);
+    line-height: 24px;
+}
+
+
+/**/
+
+.principal {
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.principal h2 {
+    color: var(--Black);
+    font-size: 45px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: var(--font_Josefina);
+}
+
+.principal a {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 13px;
+    font-family: var(--font_Josefina);
+    color: var(--White);
+    text-decoration: none;
+    padding: 0.9% 4% 0.5% 4%;
+    background-color: var(--Black);
+    word-spacing: 5px
+}
+
+.principal a:hover {
+    background-color: rgba(0, 0, 0, 0.898);
+}
+
+.grid-img {
+    padding: 8% 0 0 0;
+    display: grid;
+    position: relative;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-img img {
+    width: 100%;
+}
+
+.grid-img .imagen-text h3 {
+    position: absolute;
+    width: 15%;
+    font-size: 35px;
+    margin: -11% 10% 0% 2.5%;
+    color: var(--White);
+    text-transform: uppercase;
+    font-weight: 200;
+    font-family: var(--font_Josefina);
+}
+
+.grid-img .imagen-text:hover img {
+    filter: opacity(35%);
+    cursor: pointer;
+}
+
+.grid-img .imagen-text:hover h3 {
+    color: var(--Very_Dark);
+}
+
+footer {
+    padding: 5%;
+    display: flex;
+    background-color: var(--Black);
+    justify-content: space-around;
+}
+
+.izquierda {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.izquierda .logo img {
+    width: 32%;
+}
+
+.footer-nav {
+    width: 80%;
+    padding: 5% 0 0 0;
+}
+
+.derecha {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.derecha p {
+    color: var(--White);
+}
+
+.icons {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+}
+
+.icons ul {
+    position: relative;
+    display: flex;
+}
+
+.icons ul li {
+    position: relative;
+    list-style: none;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.icons ul li a {
+    text-decoration: none;
+}
+
+.icons ul li a i {
+    font-size: 2.5em;
+    color: rgb(253, 251, 251);
+}
+
+.icons ul a i:hover {
+    color: rgba(216, 208, 208, 0.823);
+    transition: .9s;
+}
+
+.icons ul a i:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 45px;
+    transform: translateX(-50%) scale(0);
+    -webkit-transform: translateX(-50%) scaleX(0);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: -50% -50%;
+    width: 60%;
+    height: 2px;
+    background-color: var(--White);
+    -webkit-transition: transform 250ms;
+    transition: transform 250ms;
+}
+
+.icons ul a i:hover:after {
+    -webkit-transform: translateX(-50%) scale(1);
+    transform: translateX(-50%) scale(1);
+}
+
+.derecha p {
+    color: var(--Dark_Gray);
+    font-weight: 400;
+    font-family: var(--font_Atalata);
+}
+
+@media screen and (min-width:1440px) {
+    .navegacion ul a {
+        font-size: 20px;
+    }
+    .titulo {
+        margin: 146px 0 0 145px;
+    }
+    .texto {
+        margin: 15% 45px 50px 42%;
+        padding: 6% 4% 3% 3%;
+        width: 46%;
+    }
+    .texto h2 {
+        padding: 0 0 15px 0;
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .titulo h1 {
+        font-size: 55px;
+    }
+    .imagen {
+        width: 70%;
+    }
+    .texto {
+        margin: 15% 35px 45px 49%;
+        padding: 6% 10% 10% 6%;
+        width: 47%;
+    }
+    .texto h2 {
+        padding: 0 0 30px 0;
+        font-size: 35px;
+    }
+    .texto p {
+        font-size: 13px;
+    }
+}
